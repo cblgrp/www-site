@@ -1,0 +1,13 @@
+{
+  "name": "cbl-web-site",
+  "version": "1.0.0",
+  "description": "The website of CloudyBay Lighting.",
+  "main": "index.html",
+  "repository": "https://github.com/cblled/www-site.git",
+  "author": "Xiaobo <idpocky@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "nuxt": "^1.3.0"
+  }
+}
