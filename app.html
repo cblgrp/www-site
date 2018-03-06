@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--[if IE 9]> <html class="no-js lt-ie9 ie9 fixed-layout" lang="en-US" {{ HTML_ATTRS }}> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html {{ HTML_ATTRS }} class="js cors svg xhr2 localstorage audio placeholder cssanimations flexbox backgroundblendmode">
+<!--<![endif]-->
+
+<head>
+  {{ HEAD }}
+  <style type="text/css">
+    .no-js img.lazyload {
+      display: none;
+    }
+    #page-loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1000;
+      background-color: white;
+    }
+    #page-loader .loader {
+      display: block;
+      position: relative;
+      left: 50%;
+      top: 50%;
+      width: 150px;
+      height: 150px;
+      margin: -75px 0 0 -75px;
+    }
+  </style>
+</head>
+
+<body {{ BODY_ATTRS }}>
+  <!-- Preloader-->
+  <div id="page-loader">
+    <div class="loader loader-large"></div>
+	</div>
+  <!-- Preloader end-->
+  {{ APP }}
+  <script type="text/javascript">
+    // if (typeof platform !== 'undefined') {
+    //   document.body.classList.add(platform.name);
+    // }
+    window.onload = window.onpageshow = function () {
+      // document.getElementById('page-loader').style.display = 'none';
+      document.getElementById('page-loader').classList.add('uk-animation-fade');
+      document.getElementById('page-loader').classList.add('uk-animation-reverse');
+      setTimeout(() => {
+        document.getElementById('page-loader').style.display = 'none';
+      }, 500);
+    };
+
+  </script>
+</body>
+
+</html>

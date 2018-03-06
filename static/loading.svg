@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="260px" height="260px" viewBox="0 0 260 260" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title></title>
+    <desc></desc>
+    <defs></defs>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="logo">
+            <g id="Group" transform="translate(79.000000, 16.000000)">
+                <rect id="Rectangle" fill="#CB161D" transform="translate(51.000000, 51.000000) rotate(-45.000000) translate(-51.000000, -51.000000) " x="-8.79697837" y="38.862974" width="119.593957" height="24.2740521" rx="12.137026">
+                  <animate
+                    attributeName="opacity"
+                    from="1" to="0"
+                    begin="0s" dur="1s"
+                    repeatCount="indefinite"
+                    keyTimes="0; .8; 1"
+                    calcMode="linear"
+                  />
+                </rect>
+                <rect id="Rectangle" fill="#54B244" transform="translate(51.000000, 112.461538) rotate(-45.000000) translate(-51.000000, -112.461538) " x="-8.79697837" y="100.324512" width="119.593957" height="24.2740521" rx="12.137026">
+                  <animate
+                    attributeName="opacity"
+                    from="1" to="0"
+                    begin="0.3s" dur="1s"
+                    repeatCount="indefinite"
+                    keyTimes="0; .8; 1"
+                    calcMode="linear"
+                  />
+                </rect>
+                <rect id="Rectangle" fill="#0085CA" transform="translate(51.000000, 176.538462) rotate(-45.000000) translate(-51.000000, -176.538462) " x="-8.79697837" y="164.401436" width="119.593957" height="24.2740521" rx="12.137026">
+                  <animate
+                    attributeName="opacity"
+                    from="1" to="0"
+                    begin="0.5s" dur="1s"
+                    repeatCount="indefinite"
+                    keyTimes="0; .8; 1" calcMode="linear"
+                  />
+                </rect>
+            </g>
+        </g>
+    </g>
+</svg>
