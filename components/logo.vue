@@ -1,5 +1,5 @@
 <template>
-  <div class="logo uk-logo">
+  <div class="logo uk-logo" :class="{ 'header-logo' : isHeader}">
     <img src="/logo.png" alt="Cloudybay Lighting Logo" />
     <div class="logo-text uk-visible@s">
       <svg viewBox="0 0 380 226" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -24,6 +24,8 @@
   </div>
 </template>
 <style scoped lang="less">
+  @import '../assets/style/_variants.less';
+
   .logo {
     display: flex;
     align-items: center;
@@ -36,25 +38,48 @@
       }
     }
     img, svg {
-      height: 40px;
+      height: 50px;
       transition: .3s ease-in-out;
       transition-property: color, height, fill;
     }
+    #svg-logo-text {
+      fill: #777777;
+    }
   }
-
-  .logo-text > svg {
+  .header-logo {
+    img, svg {
+      height: 40px;
+    }
     #svg-logo-text {
       fill: rgba(255, 255, 255, .7);
     }
   }
   &.uk-navbar-sticky {
-    img, svg {
-      height: 30px;
-    }
-    .logo-text > svg {
+    .header-logo {
+      img, svg {
+        height: 30px;
+      }
       #svg-logo-text {
         fill: rgba(27,31,35,0.7);
       }
     }
   }
+  @media (max-width: @breakpoint-small-max) {
+    #header {
+      .header-logo > img, svg {
+        height: 30px;
+      }
+    }
+  }
 </style>
+
+<script>
+  export default {
+    props: {
+      isHeader: {
+        type: Boolean,
+        default: false,
+      },
+    }
+  }
+</script>
