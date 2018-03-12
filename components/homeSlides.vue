@@ -12,8 +12,8 @@
         <li id="slide1">
           <slide-img-container>
             <img
-              src="~/assets/img/index4_tn72.jpg"
-              data-src="~/assets/img/index4.jpg"
+              src="/img/products/index4_tn72.jpg"
+              data-src="/img/products/index4.jpg"
               class="lazyload blur-up"
               uk-cover
               alt=""
@@ -42,7 +42,7 @@
         <li id="slide2">
           <slide-img-container>
             <img
-              src="~/assets/img/index1.jpg"
+              src="/img/products/index1.jpg"
               uk-cover
               alt=""
             />
@@ -54,12 +54,12 @@
         </li>
         <li>
           <slide-img-container>
-            <img src="~/assets/img/index2.jpg" alt="" uk-cover />
+            <img src="/img/products/index2.jpg" alt="" uk-cover />
           </slide-img-container>
         </li>
         <li class="uk-animation-toggle">
           <slide-img-container :kenburns="true">
-            <img src="~/assets/img/index3.jpg" uk-cover />
+            <img src="/img/products/index3.jpg" uk-cover />
           </slide-img-container>
           <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom uk-width-1-2@m uk-width-1-1@s uk-margin-auto">
             <h1 class="uk-margin-remove">Bottom</h1>
@@ -121,7 +121,6 @@
     },
     mounted: () => {
       this.isLoaded = true;
-      console.log('mounted');
     }
   }
 </script>

@@ -7,7 +7,7 @@
       <nuxt/>
     </div>
     <div id="offcanvas" uk-offcanvas="mode: slide; overlay: true">
-      <div class="uk-offcanvas-bar">
+      <div class="uk-offcanvas-bar uk-box-shadow-large">
         <div class="uk-panel">
           <ul class="uk-nav uk-nav-default">
             <nuxt-link to="/" class="uk-text-uppercase" tag="li" active-class="uk-active" exact>
@@ -18,10 +18,28 @@
               <div class="uk-nav-divider" />
               <ul class="uk-text-uppercase">
                 <nuxt-link to="#" tag="li" active-class="uk-active">
-                  <a class="offset-nav-sub-item uk-text-truncate">Category asdakjlajlsdkjal1</a>
+                  <a class="offset-nav-sub-item uk-text-truncate">Smart Lighting</a>
                 </nuxt-link>
                 <nuxt-link to="#" tag="li" active-class="uk-active">
-                  <a class="offset-nav-sub-item uk-text-truncate">Category2</a>
+                  <a class="offset-nav-sub-item uk-text-truncate">Step Light</a>
+                </nuxt-link>
+                <nuxt-link to="#" tag="li" active-class="uk-active">
+                  <a class="offset-nav-sub-item uk-text-truncate">Ceiling Light</a>
+                </nuxt-link>
+                <nuxt-link to="#" tag="li" active-class="uk-active">
+                  <a class="offset-nav-sub-item uk-text-truncate">Bath Vanity Lighting</a>
+                </nuxt-link>
+                <nuxt-link to="#" tag="li" active-class="uk-active">
+                  <a class="offset-nav-sub-item uk-text-truncate">Indoor Wall Sconce</a>
+                </nuxt-link>
+                <nuxt-link to="#" tag="li" active-class="uk-active">
+                  <a class="offset-nav-sub-item uk-text-truncate">Pendant Lighting</a>
+                </nuxt-link>
+                <nuxt-link to="#" tag="li" active-class="uk-active">
+                  <a class="offset-nav-sub-item uk-text-truncate">Track Lighting</a>
+                </nuxt-link>
+                <nuxt-link to="#" tag="li" active-class="uk-active">
+                  <a class="offset-nav-sub-item uk-text-truncate">Outdoor Lighting</a>
                 </nuxt-link>
               </ul>
             </li>

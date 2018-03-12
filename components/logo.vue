@@ -1,6 +1,6 @@
 <template>
   <div class="logo uk-logo" :class="{ 'header-logo' : isHeader}">
-    <img src="/logo.png" alt="Cloudybay Lighting Logo" />
+    <img src="/img/logo.png" alt="Cloudybay Lighting Logo" />
     <div class="logo-text uk-visible@s">
       <svg viewBox="0 0 380 226" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
           <title></title>
@@ -37,7 +37,7 @@
         align-items: center;
       }
     }
-    img, svg {
+    img, svg, #svg-logo-text {
       height: 50px;
       transition: .3s ease-in-out;
       transition-property: color, height, fill;
@@ -52,6 +52,9 @@
     }
     #svg-logo-text {
       fill: rgba(255, 255, 255, .7);
+      &:hover {
+        fill: #FFF;
+      }
     }
   }
   &.uk-navbar-sticky {
