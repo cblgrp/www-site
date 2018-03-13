@@ -6,10 +6,10 @@
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-weight="bold">
         <g id="logo-text" fill="#000000">
-            <text id="Cloudy" stroke="#000000" font-family="ChaparralPro-Bold, Chaparral Pro" font-size="120">
+            <text id="Cloudy" font-family="ChaparralPro-BoldIt, Chaparral Pro" font-size="120" font-style="italic">
                 <tspan x="0" y="90">Cloudy</tspan>
             </text>
-            <text id="Bay" stroke="#000000" font-family="ChaparralPro-Bold, Chaparral Pro" font-size="120">
+            <text id="Bay" font-family="ChaparralPro-BoldIt, Chaparral Pro" font-size="120" font-style="italic">
                 <tspan x="0" y="189">Bay</tspan>
             </text>
             <text id="TM" font-family="LucidaGrande-Bold, Lucida Grande" font-size="30">

@@ -6,19 +6,19 @@
           <title></title>
           <desc></desc>
           <defs></defs>
-          <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-weight="bold">
-              <g id="svg-logo-text" fill="#000000">
-                  <text id="Cloudy" stroke="#000000" font-family="ChaparralPro-Bold, Chaparral Pro" font-size="120">
-                      <tspan x="0" y="90">Cloudy</tspan>
-                  </text>
-                  <text id="Bay" stroke="#000000" font-family="ChaparralPro-Bold, Chaparral Pro" font-size="120">
-                      <tspan x="0" y="189">Bay</tspan>
-                  </text>
-                  <text id="TM" font-family="LucidaGrande-Bold, Lucida Grande" font-size="30">
-                      <tspan x="203" y="135">TM</tspan>
-                  </text>
-              </g>
-          </g>
+          <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-weight="bold">
+            <g id="svg-logo-text" fill="#000000">
+                <text id="Cloudy" font-family="ChaparralPro-BoldIt, Chaparral Pro" font-size="120" font-style="italic">
+                    <tspan x="0" y="90">Cloudy</tspan>
+                </text>
+                <text id="Bay" font-family="ChaparralPro-BoldIt, Chaparral Pro" font-size="120" font-style="italic">
+                    <tspan x="0" y="189">Bay</tspan>
+                </text>
+                <text id="TM" font-family="LucidaGrande-Bold, Lucida Grande" font-size="30">
+                    <tspan x="203" y="135">TM</tspan>
+                </text>
+            </g>
+        </g>
       </svg>
     </div>
   </div>
@@ -61,9 +61,6 @@
     .header-logo {
       img, svg {
         height: 30px;
-      }
-      #svg-logo-text {
-        fill: rgba(27,31,35,0.7);
       }
     }
   }

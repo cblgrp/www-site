@@ -1,9 +1,9 @@
 <template>
-  <header id="header">
-    <nav class="uk-container uk-container-expand uk-navbar-container"
-      uk-sticky="cls-active: uk-navbar-sticky; animation: uk-animation-slide-top;"
-      uk-navbar
-    >
+  <header
+    id="header"
+    uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; animation: uk-animation-slide-top; bottom: #transparent-sticky-navbar"
+  >
+    <nav class="uk-container uk-navbar-container uk-navbar-transparent" uk-navbar>
       <div class="uk-navbar-left">
         <nuxt-link class="uk-navbar-logo" to="/">
           <logo :isHeader="true" />
@@ -25,13 +25,14 @@
               <div class="uk-navbar-dropdown-grid uk-child-width-1-2" uk-grid>
                 <div>
                   <ul class="uk-nav uk-navbar-dropdown-nav uk-list">
-                    <li class="cat-item" v-for="item in categories" :key="item.id" v-if="item.id < 4">
-                      <a href="#">
+                    <li v-for="item in categories" :key="item.id" v-if="item.id < 4">
+                      <a class="cat-item" href="#">
                         <div class="uk-flex uk-flex-middle">
-                          <div class="uk-cover-container cat-thumb">
-                            <img :src="item.thumb" alt="" uk-cover>
+                          <div class="uk-cover-container cat-thumb uk-border-rounded">
+                            <img :src="item.thumb" alt="" uk-cover />
+                            <div :class="`uk-overlay-default uk-position-cover img-cover`" />
                           </div>
-                          <div class="uk-margin-small-left">
+                          <div class="uk-margin-small-left cat-title">
                             <div class="uk-margin-small-bottom">{{item.name}}</div>
                             <div class="text-xs uk-text-muted uk-text-capitalize">Total {{item.total}}</div>
                           </div>
@@ -42,13 +43,14 @@
                 </div>
                 <div>
                   <ul class="uk-nav uk-navbar-dropdown-nav uk-list">
-                    <li class="cat-item" v-for="item in categories" :key="item.id" v-if="item.id >= 4">
-                      <a href="#">
+                    <li v-for="item in categories" :key="item.id" v-if="item.id >= 4">
+                      <a class="cat-item" href="#">
                         <div class="uk-flex uk-flex-middle">
-                          <div class="uk-cover-container cat-thumb">
+                          <div class="uk-cover-container cat-thumb uk-border-rounded">
                             <img :src="item.thumb" alt="" uk-cover>
+                            <div :class="`uk-overlay-default uk-position-cover img-cover`" />
                           </div>
-                          <div class="uk-margin-small-left">
+                          <div class="uk-margin-small-left cat-title">
                             <div class="uk-margin-small-bottom">{{item.name}}</div>
                             <div class="text-xs uk-text-muted uk-text-capitalize">Total {{item.total}}</div>
                           </div>
@@ -87,15 +89,13 @@
     top: 0;
     left: 0;
     right: 0;
+    background: @navbar-dark;
   }
 
   .uk-navbar-container {
     height: @navbar-nav-item-height;
-    transition: height .3s ease-out, box-shadow .3s ease-out, background-color .3s ease-out;
     transform: translate3d(0, 0, 0);
-    &:not(.uk-navbar-transparent) {
-      background: @navbar-dark;
-    }
+    transition: height .3s ease-out, box-shadow .3s ease-out;
     .uk-navbar-logo {
       text-decoration: none;
     }
@@ -105,8 +105,7 @@
       >a {
         height: 50px;
         color: @navbar-light;
-        transition: .1s ease-in-out;
-        transition-property: color;
+        transition: color .1s ease-in-out;
         position: relative;
         text-decoration: none;
         &::after {
@@ -137,47 +136,44 @@
         color: #FFF;
       }
     }
-    .cat-item:hover {
-      .cat-thumb img {
-        opacity: 1;
-      }
-    }
-    .cat-thumb {
-      width: 50px;
-      height: 50px;
-      border-radius: 6px;
-      img {
-        transition: opacity .3s ease-in;
-        opacity: .7;
-      }
-    }
     &.uk-navbar-sticky {
       height: 50px;
-      background-color: rgba(255, 255, 255, .9);
       box-shadow: 0 0 60px 0 rgba(0, 0, 0, .07);
       .uk-navbar-nav>li>a::after,
       a::before {
         display: none;
       }
-      .uk-navbar-nav>li:not(.uk-active)>a,
-      .uk-navbar-toggle {
-        color: @navbar-dark;
-        &:hover {
-          color: #333;
-        }
-      }
     }
   }
 
-  .uk-divider-icon {
-    background-size: 12px;
-  }
+  .uk-navbar-dropdown {
+    .cat-thumb {
+      width: 50px;
+      height: 50px;
+      .img-cover {
+        transition: opacity .3s ease-in;
+        opacity: .5;
+      }
+    }
+    a.cat-item:hover {
+      .img-cover {
+        opacity: 0;
+      }
+    }
+    .uk-divider-icon {
+      background-size: 12px;
+    }
 
-  .uk-navbar-dropdown-nav {
-    a {
-      color: @navbar-dark;
-      &:hover {
-        color: #333;
+    .uk-navbar-dropdown-nav {
+      a {
+        .cat-title {
+          color: @navbar-dark;
+        }
+        &:hover {
+          .cat-title {
+            color: #333;
+          }
+        }
       }
     }
   }
@@ -196,14 +192,21 @@
 </style>
 
 <script>
+  import axios from 'axios'
   import Logo from '~/components/logo'
-  import Categories from '~/assets/data/categories.json'
 
   export default {
     data () {
       return {
-        categories: Categories
+        categories: []
       }
+    },
+    async mounted() {
+      const ax = axios.create({
+        baseURL: process.env.baseURL
+      })
+      const { data } = await ax.get('/data/categories.json')
+      this.categories = data
     },
     components: {
       Logo

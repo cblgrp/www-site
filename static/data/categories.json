@@ -1,59 +1,59 @@
 [
   {
     "id": 0,
-    "name": "Smart Lighting",
+    "name": "Smart Lighting1",
     "alias": "smart-lighting",
     "thumb": "/img/products/index1_tn72.jpg",
     "img": "",
-    "total": "7"
+    "desc": "7"
   }, {
     "id": 1,
     "name": "Step Light",
     "alias": "step-light",
     "thumb": "/img/products/index2_tn72.jpg",
     "img": "",
-    "total": "6"
+    "desc": ""
   }, {
     "id": 2,
     "name": "Ceiling Light",
     "alias": "ceiling-light",
     "thumb": "/img/products/index3_tn72.jpg",
     "img": "",
-    "total": "5"
+    "desc": ""
   }, {
     "id": 3,
     "name": "Bath Vanity Lighting",
     "alias": "bath-vanity-lighting",
     "thumb": "/img/products/index4_tn72.jpg",
     "img": "",
-    "total": "2"
+    "desc": ""
   }, {
     "id": 4,
     "name": "Indoor Wall Sconce",
     "alias": "indoor-wall-sconce",
     "thumb": "",
     "img": "",
-    "total": "3"
+    "desc": ""
   }, {
     "id": 5,
     "name": "Pendant Lighting",
     "alias": "pendant-lighting",
     "thumb": "",
     "img": "",
-    "total": "8"
+    "desc": ""
   }, {
     "id": 6,
     "name": "Track Lighting",
     "alias": "track-lighting",
     "thumb": "",
     "img": "",
-    "total": "1"
+    "desc": ""
   }, {
     "id": 7,
     "name": "Outdoor Lighting",
     "alias": "outdoor-lighting",
     "thumb": "",
     "img": "",
-    "total": "3"
+    "desc": ""
   }
 ]

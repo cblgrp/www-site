@@ -19,7 +19,8 @@
               alt=""
             />
           </slide-img-container>
-          <div class="uk-overlay uk-container uk-container-expand uk-position-center-left uk-text-left uk-position-large">
+          <div class="uk-position-cover uk-container uk-container-small">
+            <div class="uk-position-center-left uk-position-large">
             <div uk-slideshow-parallax="scale: 1,1,0.8">
               <div
                 uk-slideshow-parallax="x: 400,0,0;"
@@ -36,6 +37,7 @@
               >
                 check it now
               </button>
+            </div>
             </div>
           </div>
         </li>

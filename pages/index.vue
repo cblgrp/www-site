@@ -49,13 +49,6 @@
       HomeSlides,
       SlideImgContainer
     },
-    asyncData() {
-      return new Promise((resolve) => {
-        setTimeout(function () {
-          resolve({ name: 'world' })
-        }, 1000)
-      })
-    },
     head () {
       return {
         title: 'Welcome',

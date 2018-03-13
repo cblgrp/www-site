@@ -11,7 +11,7 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate",
+    "generate": "NODE_ENV=production nuxt generate",
     "static": "yarn generate && http-server ./dist",
     "build:gh-pages": "DEPLOY_ENV=GH_PAGES nuxt build",
     "generate:gh-pages": "DEPLOY_ENV=GH_PAGES nuxt generate",
@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "@nuxtjs/google-analytics": "^2.0.2",
+    "axios": "^0.18.0",
     "lazysizes": "^4.0.1",
     "nuxt": "^1.4.0",
     "uikit": "^3.0.0-beta.40"

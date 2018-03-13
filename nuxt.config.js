@@ -1,4 +1,7 @@
 const cdn = 'http://oyhnfm85i.bkt.clouddn.com/cbl'
+const prdRoot = 'http://localhost:8080'
+
+console.log(process.env.NODE_ENV);
 
 const externals = [
   // Those vendors that have been added to static/vendor by @nuxt/vender module or externals.
@@ -6,6 +9,9 @@ const externals = [
   { src: 'https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/js/uikit-icons.min.js', type: 'text/javascript' },
 ]
 module.exports = {
+  env: {
+    baseURL: (process.env.NODE_ENV === 'production' ? prdRoot : 'http://localhost:3000')
+  },
   /*
   ** Headers of the page
   */
@@ -52,7 +58,7 @@ module.exports = {
       chunk: '[name].[chunkhash].js', // default: [name].[chunkhash].js
     },
 
-    vendor: [ 'uikit', 'lazysizes' ],
+    vendor: [ 'uikit', 'lazysizes', 'axios' ],
     // The max chunk file size. (default: 300k per file)
     maxChunkSize: 300000,
 

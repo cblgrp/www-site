@@ -1,11 +1,19 @@
 <template>
   <div class="uk-offcanvas-content uk-position-relative">
     <no-ssr>
-      <layout-header/>
+      <layout-header />
     </no-ssr>
     <div id="content">
       <nuxt/>
     </div>
+    <layout-footer />
+    <a
+      id="to-top"
+      href=""
+      class="uk-dark"
+      uk-totop
+      uk-scroll
+    />
     <div id="offcanvas" uk-offcanvas="mode: slide; overlay: true">
       <div class="uk-offcanvas-bar uk-box-shadow-large">
         <div class="uk-panel">
@@ -59,7 +67,7 @@
   </div>
 </template>
 
-<style scoped>
+<style scoped lang="less">
   .offset-nav-item {
     padding-left: 15px;
   }
@@ -70,28 +78,44 @@
     background-color: transparent;
     height: 100px;
   } */
+  #to-top {
+    display: none;
+    // backface-visibility: hidden;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    opacity: 0;
+    transition: 0.3s all ease;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    overflow: hidden;
+    z-index: 5000;
+    color: #cecece;
+    border: 1px solid rgba(0,0,0,0.1);
+    background-color: #fff;
+    box-shadow: 0px 3px 6px 1px rgba(0,0,0,0.07);
+    &.uk-scrollspy-inview {
+      opacity: 1;
+    }
+  }
 </style>
 
 <script>
-import LayoutHeader from '~/components/LayoutHeader'
+  import LayoutHeader from '~/components/LayoutHeader'
+  import LayoutFooter from '~/components/LayoutFooter'
 
-export default {
-  components: {
-    LayoutHeader
-  },
-  // beforeCreate (ctx) {
-  //   console.log('text')
-  //   console.log(ctx)
-  //   return {
-  //     isMobile: ctx.isMobile
-  //   }
-  // }
-  computed: {
-
-    clientType() {
-      return this.$store.state.clientType
+  export default {
+    components: {
+      LayoutHeader,
+      LayoutFooter
+    },
+    computed: {
+      clientType() {
+        return this.$store.state.clientType
+      }
+      // ...mapGetters([clientType: 'getClientType'])
     }
-    // ...mapGetters([clientType: 'getClientType'])
   }
-}
 </script>
