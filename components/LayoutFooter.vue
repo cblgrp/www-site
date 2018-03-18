@@ -1,9 +1,9 @@
 <template>
-  <footer class="uk-background-secondary uk-light uk-margin-top">
-    <div class="uk-container uk-container-small">
+  <footer class="uk-background-secondary uk-light uk-animation-slide-bottom-small">
+    <div class="uk-container uk-container-medium">
       <div class="uk-text-center" uk-grid>
         <div class="uk-width-1-4@m uk-text-left@m uk-text-center@s">
-          <h4 class="uk-text-uppercase">Surpport</h4>
+          <h5 class="uk-text-uppercase">Surpport</h5>
           <ul class="uk-list uk-text-muted">
             <li>Manual & Installation</li>
             <li>Refund & Exchange</li>
@@ -11,7 +11,7 @@
           </ul>
         </div>
         <div class="uk-width-1-4@m uk-text-left@m uk-text-center@s">
-          <h4 class="uk-text-uppercase">About</h4>
+          <h5 class="uk-text-uppercase">About</h5>
           <ul class="uk-list uk-text-muted">
             <li>Company</li>
             <li>Contact us</li>
@@ -21,14 +21,14 @@
           </ul>
         </div>
         <div class="uk-width-1-2@m  uk-text-left@m uk-text-center@s">
-          <h4 class="uk-text-uppercase">Newsletter</h4>
+          <h5 class="uk-text-uppercase">Newsletter</h5>
           <div class="uk-margin-top">
             <form id="subscribe-form">
-              <input class="uk-input uk-width-2-3@m uk-margin-small-bottom uk-text-center@s" type="text" placeholder="Sign up your email...">
+              <input class="uk-input uk-width-2-3@m uk-margin-small-bottom" type="text" placeholder="Sign up your email...">
               <button class="uk-button uk-button-primary uk-width-1-3@m uk-margin-small-bottom">Subscribe</button>
             </form>
           </div>
-          <h4 class="uk-text-uppercase uk-margin-medium-top">Let's be friend...</h4>
+          <h5 class="uk-text-uppercase uk-margin-medium-top">Let's be friend...</h5>
           <div class="uk-margin-top">
             ins
           </div>
@@ -56,6 +56,9 @@
   }
 
   @media (max-width: @breakpoint-small-max) {
+    #subscribe-form input[type="text"] {
+      text-align: center;
+    }
   }
 </style>
 

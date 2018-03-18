@@ -10,7 +10,7 @@ const externals = [
 ]
 module.exports = {
   env: {
-    baseURL: (process.env.NODE_ENV === 'production' ? prdRoot : 'http://localhost:3000')
+    baseURL: (process.env.NODE_ENV === 'production' ? prdRoot : 'http://localhost:3000'),
   },
   /*
   ** Headers of the page

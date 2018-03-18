@@ -5,7 +5,7 @@
     class="img-container img-container-dark"
   >
     <div
-      uk-slideshow="ratio: false; animation: push; pause-on-hover: true; autoplay: false; autoplay-interval: 3000"
+      uk-slideshow="ratio: false; animation: push; pause-on-hover: true; autoplay: true; autoplay-interval: 2000"
       class="slides-container uk-visible-toggle uk-light uk-position-relative"
     >
       <ul class="uk-slideshow-items">
@@ -71,7 +71,12 @@
       </ul>
       <a class="uk-slidenav-large uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous" />
       <a class="uk-slidenav-large uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next" />
-      <ul class="uk-slideshow-nav uk-dotnav uk-flex-center uk-margin uk-margin-small uk-position-bottom uk-position-small" />
+      <ul class="uk-slideshow-nav uk-dotnav uk-flex-center uk-margin uk-margin-small uk-position-bottom uk-position-small">
+        <li uk-slideshow-item="0"><a href="#">Item 1</a></li>
+        <li uk-slideshow-item="1"><a href="#">Item 2</a></li>
+        <li uk-slideshow-item="2"><a href="#">Item 3</a></li>
+        <li uk-slideshow-item="3"><a href="#">Item 4</a></li>
+      </ul>
     </div>
   </div>
 </template>
@@ -93,6 +98,9 @@
       .slide-title {
         margin-top: 0;
       }
+    }
+    ul.uk-dotnav > li:first-child {
+      padding-left: 0 !important;
     }
   }
   @media (max-width: @breakpoint-small-max) {

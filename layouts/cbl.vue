@@ -6,7 +6,9 @@
     <div id="content">
       <nuxt/>
     </div>
-    <layout-footer />
+    <no-ssr>
+      <layout-footer />
+    </no-ssr>
     <a
       id="to-top"
       href=""

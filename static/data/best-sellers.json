@@ -1,0 +1,24 @@
+[
+  {
+    "id": 0,
+    "title": "LED Flush Mount Ceiling Fixture",
+    "alias": "smart-lighting",
+    "thumb": "/img/products/best-sellers/item1_tn128.jpg",
+    "img": "/img/products/best-sellers/item1.jpg",
+    "desc": "12-inch 3000K Warm White"
+  }, {
+    "id": 1,
+    "title": "LED Photocell Wall Pack ",
+    "alias": "step-light",
+    "thumb": "/img/products/best-sellers/item2_tn128.jpg",
+    "img": "/img/products/best-sellers/item2.jpg",
+    "desc": "15W 5000K Daylight"
+  }, {
+    "id": 2,
+    "title": "Hanging Sockets Weatherproof Outdoor String Lights",
+    "alias": "ceiling-light",
+    "thumb": "/img/products/best-sellers/item3_tn128.jpg",
+    "img": "/img/products/best-sellers/item3.jpg",
+    "desc": "37 inches 11W per bulb"
+  }
+]

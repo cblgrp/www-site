@@ -1,7 +1,7 @@
 <template>
   <header
     id="header"
-    uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; animation: uk-animation-slide-top; bottom: #transparent-sticky-navbar"
+    uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; animation: uk-animation-slide-top-small; bottom: #transparent-sticky-navbar"
   >
     <nav class="uk-container uk-navbar-container uk-navbar-transparent" uk-navbar>
       <div class="uk-navbar-left">
@@ -18,7 +18,7 @@
             <a>Products</a>
             <div
               class="uk-navbar-dropdown uk-navbar-dropdown-width-3"
-              uk-dropdown="animation: uk-animation-slide-top-small; mode: click;"
+              uk-dropdown="animation: uk-animation-slide-top-small; delay-hide: 200"
             >
               <div class="text-xs uk-text-capitalize uk-text-muted">Product Category</div>
               <hr class="uk-divider-icon uk-margin-remove-top uk-margin-small" />
@@ -26,18 +26,18 @@
                 <div>
                   <ul class="uk-nav uk-navbar-dropdown-nav uk-list">
                     <li v-for="item in categories" :key="item.id" v-if="item.id < 4">
-                      <a class="cat-item" href="#">
+                      <nuxt-link class="cat-item" :to="{ name: 'category-alias', params: { alias: item.alias } }">
                         <div class="uk-flex uk-flex-middle">
                           <div class="uk-cover-container cat-thumb uk-border-rounded">
                             <img :src="item.thumb" alt="" uk-cover />
                             <div :class="`uk-overlay-default uk-position-cover img-cover`" />
                           </div>
                           <div class="uk-margin-small-left cat-title">
-                            <div class="uk-margin-small-bottom">{{item.name}}</div>
+                            <div class="uk-margin-small-bottom">{{item.title}}</div>
                             <div class="text-xs uk-text-muted uk-text-capitalize">Total {{item.total}}</div>
                           </div>
                         </div>
-                      </a>
+                      </nuxt-link>
                     </li>
                   </ul>
                 </div>
@@ -51,7 +51,7 @@
                             <div :class="`uk-overlay-default uk-position-cover img-cover`" />
                           </div>
                           <div class="uk-margin-small-left cat-title">
-                            <div class="uk-margin-small-bottom">{{item.name}}</div>
+                            <div class="uk-margin-small-bottom">{{item.title}}</div>
                             <div class="text-xs uk-text-muted uk-text-capitalize">Total {{item.total}}</div>
                           </div>
                         </div>

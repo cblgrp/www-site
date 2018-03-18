@@ -11,6 +11,7 @@
 
 <script>
 export default {
+  layout: 'cbl',
   asyncData() {
     return new Promise((resolve) => {
       setTimeout(() => {
