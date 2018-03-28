@@ -59,7 +59,7 @@
   @media (max-width: @breakpoint-small-max) {
     #subscribe-form input[type="text"] {
       text-align: center;
-      border-right: 1px solid rgba(255, 255, 255, .2);
+      border-right: 1px solid rgba(255, 255, 255, .2) !important;
     }
   }
 </style>
