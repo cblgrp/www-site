@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "product_id": 11,
+    "title": "GENERAL LIGHTING",
+    "slug": "general-lighting",
+    "is_best": true,
+    "title_thumb": "/img/products/practices/dco1017830bn_tn128.jpg",
+    "title_img": "/img/products/practices/dco1017830bn.jpg",
+    "brief": "General lighting is the main source of illumination in a space. This uniform, base level of lighting can easily become the focus of energy reduction, as the light levels from other fixtures can be lowered.",
+    "desc": "",
+    "imgs": ["/img/products/cbst003830wh.jpg"]
+  }, {
+    "id": 2,
+    "product_id": 23,
+    "title": "TASK LIGHTING",
+    "slug": "task-lighting",
+    "is_best": true,
+    "title_thumb": "/img/products/practices/cblbv001-24bn30_tn128.jpg",
+    "title_img": "/img/products/practices/cblbv001-24bn30.jpg",
+    "brief": "Task lighting is used to illuminate an area for a specific task; providing a focused, localized, and higher level of illumination. Necessary to the functioning of a space, it is important to use energy efficient sources to reduce operating costs. ",
+    "desc": "",
+    "imgs": ["/img/products/cbst003830wh.jpg"]
+  }, {
+    "id": 3,
+    "product_id": 25,
+    "title": "ACCENT LIGHTING",
+    "slug": "accent-lighting",
+    "is_best": true,
+    "title_thumb": "/img/products/practices/cbwl006830bn_tn128.jpg",
+    "title_img": "/img/products/practices/cbwl006830bn.jpg",
+    "brief": "Accent lighting reinforces design aesthetics and creates a dramatic emphasis on shapes, textures, finishes and colors. It creates a visual interest in the space and adds depth, contrast and creates a focal point; it highlights shape, texture, finish and color. ",
+    "desc": "",
+    "imgs": ["/img/products/cbst003830wh.jpg"]
+  }, {
+    "id": 4,
+    "product_id": 36,
+    "title": "DECORATIVE LIGHTING",
+    "slug": "decorative-lighting",
+    "is_best": true,
+    "title_thumb": "/img/products/practices/cbst-s1411w-i_tn128.jpg",
+    "title_img": "/img/products/practices/cbst-s1411w-i.jpg",
+    "brief": "Decorative lighting serves a dual purpose: not only to contribute to the lighting layers in a retail environment, but also to enhance the look of the space as a design element. It includes pendants, sconces, chandeliers, table and floor lamps, and cylinders. ",
+    "desc": "",
+    "imgs": ["/img/products/cbst003830wh.jpg"]
+  }, {
+    "id": 5,
+    "product_id": 11,
+    "title": "",
+    "slug": "",
+    "is_best": false,
+    "title_thumb": "/img/products/cbst003830wh_tn128.jpg",
+    "title_img": "/img/products/cbst003830wh.jpg",
+    "brief": "",
+    "desc": "",
+    "imgs": ["/img/products/cbst003830wh.jpg"]
+  }
+]

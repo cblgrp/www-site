@@ -25,8 +25,8 @@
               <div class="uk-navbar-dropdown-grid uk-child-width-1-2" uk-grid>
                 <div>
                   <ul class="uk-nav uk-navbar-dropdown-nav uk-list">
-                    <li v-for="item in categories" :key="item.id" v-if="item.id < 4">
-                      <nuxt-link class="cat-item" :to="{ name: 'category-alias', params: { alias: item.alias } }">
+                    <li v-for="item in categories" :key="item.id" v-if="item.id < 5">
+                      <nuxt-link class="cat-item" :to="`/category/${item.alias}`">
                         <div class="uk-flex uk-flex-middle">
                           <div class="uk-cover-container cat-thumb uk-border-rounded">
                             <img :src="item.thumb" alt="" uk-cover />
@@ -43,7 +43,7 @@
                 </div>
                 <div>
                   <ul class="uk-nav uk-navbar-dropdown-nav uk-list">
-                    <li v-for="item in categories" :key="item.id" v-if="item.id >= 4">
+                    <li v-for="item in categories" :key="item.id" v-if="item.id >= 5">
                       <a class="cat-item" href="#">
                         <div class="uk-flex uk-flex-middle">
                           <div class="uk-cover-container cat-thumb uk-border-rounded">
@@ -103,6 +103,7 @@
       margin-left: 10px;
       user-select: none;
       >a {
+        font-weight: 500;
         height: 50px;
         color: @navbar-light;
         transition: color .1s ease-in-out;
@@ -192,22 +193,15 @@
 </style>
 
 <script>
-  import axios from 'axios'
   import Logo from '~/components/logo'
 
   export default {
-    data () {
-      return {
-        categories: []
+    computed: {
+      categories() {
+        return this.$store.state.categories
       }
     },
-    async mounted() {
-      const ax = axios.create({
-        baseURL: process.env.baseURL
-      })
-      const { data } = await ax.get('/data/categories.json')
-      this.categories = data
-    },
+
     components: {
       Logo
     },

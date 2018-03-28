@@ -3,39 +3,45 @@
     <home-slides />
     <section id="feature-section" class="index-section">
       <no-ssr>
-      <div class="uk-container uk-container-medium feature-container">
+      <div class="uk-container uk-container-medium feature-container" v-if="features">
         <div class="uk-grid-medium uk-child-width-expand@s uk-text-center" uk-grid>
-          <div class="feature-block" uk-scrollspy="cls: uk-animation-slide-left-small; repeat: true">
-            <div class="feature-img uk-margin-bottom">
+          <div class="feature-block" >
+            <div class="feature-img uk-margin-bottom" uk-scrollspy="cls: uk-animation-slide-top-small; repeat: true; delay: 300">
               <img :src="features.energy.img" width="100" />
             </div>
-            <div class="uk-text-bold uk-margin-small-bottom">
-              {{features.energy.title}}
-            </div>
-            <div class="uk-text-muted">
-              {{features.energy.desc}}
+            <div uk-scrollspy="cls: uk-animation-slide-bottom-small; repeat: true;">
+              <div class="uk-text-bold uk-margin-small-bottom">
+                {{features.energy.title}}
+              </div>
+              <div class="uk-text-muted">
+                {{features.energy.desc}}
+              </div>
             </div>
           </div>
-          <div class="feature-block feature-block-middle" uk-scrollspy="cls: uk-animation-slide-bottom-small; repeat: true">
-            <div class="feature-img uk-margin-bottom">
+          <div class="feature-block feature-block-middle">
+            <div class="feature-img uk-margin-bottom" uk-scrollspy="cls: uk-animation-slide-top-small; repeat: true; delay: 300">
               <img :src="features.design.img" width="100" />
             </div>
-            <div class="uk-text-bold uk-margin-small-bottom">
-              {{features.design.title}}
-            </div>
-            <div class="uk-text-muted">
-              {{features.design.desc}}
+            <div uk-scrollspy="cls: uk-animation-slide-bottom-small; repeat: true;">
+              <div class="uk-text-bold uk-margin-small-bottom">
+                {{features.design.title}}
+              </div>
+              <div class="uk-text-muted">
+                {{features.design.desc}}
+              </div>
             </div>
           </div>
           <div class="feature-block" uk-scrollspy="cls: uk-animation-slide-right-small; repeat: true">
-            <div class="feature-img uk-margin-bottom">
+            <div class="feature-img uk-margin-bottom" uk-scrollspy="cls: uk-animation-slide-top-small; repeat: true; delay: 300">
               <img :src="features.quality.img" width="100" />
             </div>
-            <div class="uk-text-bold uk-margin-small-bottom">
-              {{features.quality.title}}
-            </div>
-            <div class="uk-text-muted">
-              {{features.quality.desc}}
+            <div uk-scrollspy="cls: uk-animation-slide-bottom-small; repeat: true;">
+              <div class="uk-text-bold uk-margin-small-bottom">
+                {{features.quality.title}}
+              </div>
+              <div class="uk-text-muted">
+                {{features.quality.desc}}
+              </div>
             </div>
           </div>
         </div>
@@ -43,37 +49,43 @@
       </no-ssr>
     </section>
 
-    <section id="best-seller-section" class="index-section" uk-parallax="bgy: -200">
-      <div class="uk-container uk-container-medium best-seller-container">
-        <h5 class="uk-text-muted uk-text-right uk-text-uppercase uk-text-bold">Best seller</h5>
-        <no-ssr>
-        <div class="uk-grid-medium uk-child-width-expand@s" uk-grid>
-          <div
-            v-for="item in bestSellers" :key="item.id"
-            class="best-seller-block"
-            uk-scrollspy="cls: uk-animation-slide-bottom-medium; repeat: true">
-            <a class="uk-inline-clip uk-transition-toggle best-seller-item uk-border-rounded uk-box-shadow-small uk-box-shadow-hover-large">
-              <img
-                :src="item.thumb"
-                :data-src="item.img"
-                class="lazyload blur-up uk-transition-scale-up uk-transition-opaque"
-                alt=""
-              />
-              <div class="uk-overlay uk-overlay-primary uk-position-bottom">
-                <div class="uk-text-small uk-text-truncate">{{item.title}}</div>
-                <div class="text-xs uk-text-muted">{{item.desc}}</div>
-              </div>
-            </a>
-          </div>
-        </div>
-        </no-ssr>
-      </div>
-    </section>
-    <section
+    <best-sellers :products="products" />
+
+    <best-practices :products="products" />
+    <!-- <section
       id="practices-section"
       class="index-section"
     >
-    </section>
+      <no-ssr>
+      <div class="uk-container uk-container-medium practices-container" v-if="bestSellers && bestSellers.length > 0">
+        <div class="uk-flex uk-flex-middle">
+          <div class="uk-flex-1 uk-margin-right uk-flex-first">
+            <hr>
+          </div>
+          <h5 class="uk-text-muted uk-text-uppercase uk-text-bold uk-margin-remove-top">Best Practices</h5>
+        </div>
+
+        <div
+          class="uk-grid-collapse uk-child-width-expand@s uk-text-center"
+          uk-grid
+          uk-height-match="target: > div > .uk-cover-container"
+        >
+          <div class="uk-width-2-5@m">
+            <div class="uk-cover-container">
+                <canvas width="" height="200"></canvas>
+                <img :src="bestSellers[1].thumb" alt="" uk-cover>
+            </div>
+          </div>
+          <div class="uk-width-1-5@m">
+            <div class="uk-cover-container">Item</div>
+          </div>
+          <div class="uk-width-2-5@m">
+            <div class="uk-cover-container">Item</div>
+          </div>
+        </div>
+      </div>
+      </no-ssr>
+    </section> -->
   </div>
 </template>
 
@@ -93,24 +105,6 @@
     min-height: 100px;
   }
 
-  #best-seller-section {
-    min-height: 150px;
-    background-image: url('/img/background/best-seller-circle.png');
-    background-size: 25%, 25%, 25%;
-    background-color: #F1F1F1;
-    background-repeat: no-repeat;
-    .best-seller-item {
-      height: 150px;
-      width: 100%;
-      .uk-overlay {
-        padding: 12px;
-        .best-seller-title {
-          font-size: 12px;
-        }
-      }
-    }
-  }
-
   @media (max-width: @breakpoint-small-max) {
     .feature-container {
       padding-left: 24px;
@@ -120,28 +114,27 @@
 </style>
 
 <script>
-  import axios from 'axios'
+  import products from '~/static/data/products.json'
+  import features from '~/static/data/features.json'
 
   import HomeSlides from '~/components/homeSlides'
   import SlideImgContainer from '~/components/slideImgContainer'
+  import BestSellers from '~/components/bestSellers'
+  import BestPractices from '~/components/bestPractices'
 
   export default {
     layout: 'cbl',
-    async asyncData ({ params, error }) {
-      const ax = axios.create({
-        baseURL: process.env.baseURL
-      })
-
-      const cblFeatures = await ax.get('/data/features.json')
-      const cblBestSellers = await ax.get('/data/best-sellers.json')
+    data () {
       return {
-        features: cblFeatures.data,
-        bestSellers: cblBestSellers.data,
+        features,
+        products,
       }
     },
     components: {
       HomeSlides,
-      SlideImgContainer
+      SlideImgContainer,
+      BestSellers,
+      BestPractices
     },
     head () {
       return {

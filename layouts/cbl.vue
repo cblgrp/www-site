@@ -113,6 +113,9 @@
       LayoutHeader,
       LayoutFooter
     },
+    // async fetch ({ store, params }) {
+    //   await store.dispatch('GET_STARS');
+    // }
     computed: {
       clientType() {
         return this.$store.state.clientType
