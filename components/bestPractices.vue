@@ -26,13 +26,10 @@
     >
       <div class="best-practice-list uk-grid-small" uk-grid-parallax="translate: 50">
         <div
-          v-for="item in bestPractices" :key="item.id"
+          v-for="(item, index) in bestPractices" :key="item.id"
           class="best-practice-item uk-transition-toggle uk-width-1-2@s uk-width-1-4@m"
         >
-          <div
-            class="uk-card uk-card-default uk-card-body"
-            style="padding: 0;"
-          >
+          <div :class="`uk-card uk-card-default uk-card-body best-practice-content-${index}`">
             <div class="item-image-container">
               <div class="uk-cover-container" style="height: 300px;">
                 <img
@@ -48,8 +45,12 @@
                 <div class="uk-text-bold uk-text-truncate uk-text-uppercase">{{item.title}}</div>
               </div>
             </div>
-            <div class="uk-text-muted" style="padding: 15px;">
+            <div class="uk-text-muted uk-text-small" style="padding: 15px 15px 20px;">
               {{ item.brief }}
+              <hr class="uk-margin-small-top" />
+              <div class="uk-text-right">
+                <a href="" class="uk-icon-link uk-icon-arrow-right-circle" uk-icon="arrow-right" />
+              </div>
             </div>
           </div>
         </div>
@@ -64,6 +65,8 @@
   #best-practice-section {
     .best-practice-item {
       .uk-card-body {
+        padding: 3px 0 0;
+        border-top: 1px solid @line-color;
         border-bottom-left-radius: 5px;
         border-bottom-right-radius: 5px;
       }
@@ -81,6 +84,28 @@
       }
       .uk-overlay {
         padding: 12px;
+      }
+      [class*='best-practice-content'] {
+        border-bottom-width: 5px;
+        border-bottom-style: solid;
+        border-top-width: 1px;
+        border-top-style: solid;
+      }
+      .best-practice-content-0 {
+        border-bottom-color: @logo-red;
+        border-top-color: @logo-red;
+      }
+      .best-practice-content-1 {
+        border-bottom-color: @primary-color;
+        border-top-color: @primary-color;
+      }
+      .best-practice-content-2 {
+        border-bottom-color: @logo-blue;
+        border-top-color: @logo-blue;
+      }
+      .best-practice-content-3 {
+        border-bottom-color: @logo-text;
+        border-top-color: @logo-text;
       }
     }
     .uk-transition-toggle {

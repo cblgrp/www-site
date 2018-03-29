@@ -8,3 +8,18 @@
   filter: "progid: DXImageTransform.Microsoft.gradient(startColorstr='#4d383838', endColorstr='#00383838', GradientType=0)";
   -ms-filter: "progid: DXImageTransform.Microsoft.gradient(startColorstr='#4d383838', endColorstr='#00383838', GradientType=0)";
 }
+
+.uk-icon-link {
+  &.uk-icon-arrow-right-circle {
+    transition: all .3s linear;
+    padding: 2px;
+    border: 1px @global-muted-color solid;
+    border-radius: 50%;
+  }
+  &:hover {
+    color: @global-emphasis-color;
+    &.uk-icon-arrow-right-circle {
+      border-color: @global-emphasis-color;
+    }
+  }
+}

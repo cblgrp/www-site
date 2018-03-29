@@ -1,5 +1,5 @@
 <template>
-  <footer class="uk-background-secondary uk-light uk-animation-slide-bottom-small">
+  <footer class="uk-dark uk-animation-slide-bottom-small">
     <div class="uk-container uk-container-medium">
       <div class="uk-text-center" uk-grid>
         <div class="uk-width-1-4@m uk-text-left@m uk-text-center@s">
@@ -41,12 +41,13 @@
   @import '../assets/style/_variants.less';
 
   footer {
+    background: @light-color;
     opacity: .9;
     padding-top: 48px;
     padding-bottom: 48px;
     #subscribe-form {
       input[type="text"] {
-        border-right: none;
+        border-right-width: 0;
       }
       button {
         background: @primary-color;
@@ -59,7 +60,7 @@
   @media (max-width: @breakpoint-small-max) {
     #subscribe-form input[type="text"] {
       text-align: center;
-      border-right: 1px solid rgba(255, 255, 255, .2) !important;
+      border-right-width: 1px !important;
     }
   }
 </style>
