@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "product_id": 11,
+    "title": "GENERAL LIGHTING",
+    "slug": "general-lighting",
+    "is_best": true,
+    "title_thumb": "/img/products/practices/dco1017830bn_tn128.jpg",
+    "title_img": "/img/products/practices/dco1017830bn.jpg",
+    "brief": "Ambient, or general, lighting is the most basic layer of lighting. It fills an area with a comfortable level of illumination and allows for safe movement in the space. Ambient lighting is fundamental to a good lighting plan, and is the base on which other layers of light are added.",
+    "desc": "",
+    "imgs": ["/img/products/cbst003830wh.jpg"]
+  }, {
+    "id": 2,
+    "product_id": 23,
+    "title": "TASK LIGHTING",
+    "slug": "task-lighting",
+    "is_best": true,
+    "title_thumb": "/img/products/practices/cblbv001-24bn30_tn128.jpg",
+    "title_img": "/img/products/practices/cblbv001-24bn30.jpg",
+    "brief": "Task lighting supplements ambient lighting in areas where daily, detailed activities are performed, such as reading, studying, cooking, or applying makeup. To enhance visual clarity and prevent eyestrain, effective task lighting should minimize glare and shadows. ",
+    "desc": "",
+    "imgs": ["/img/products/cbst003830wh.jpg"]
+  }, {
+    "id": 3,
+    "product_id": 25,
+    "title": "ACCENT LIGHTING",
+    "slug": "accent-lighting",
+    "is_best": true,
+    "title_thumb": "/img/products/practices/cbwl006830bn_tn128.jpg",
+    "title_img": "/img/products/practices/cbwl006830bn.jpg",
+    "brief": "Accent, or directional, lighting is typically used to highlight certain objects or architectural features from paintings and sculptures to walls and trees. Accent lighting should be about three times the level of the ambient illumination. It is usually preferred to use an inconspicuous fixture, as the object being lighted should be the focal point. ",
+    "desc": "",
+    "imgs": ["/img/products/cbst003830wh.jpg"]
+  }, {
+    "id": 4,
+    "product_id": 36,
+    "title": "DECORATIVE LIGHTING",
+    "slug": "decorative-lighting",
+    "is_best": true,
+    "title_thumb": "/img/products/practices/cbst-s1411w-i_tn128.jpg",
+    "title_img": "/img/products/practices/cbst-s1411w-i.jpg",
+    "brief": "Decorative lighting is when the fixture itself, or the light it creates, is the focal point. Some fixtures are designed to create beautiful and interesting patterns on the wall. More commonly however, the design of the fixture is what adds that aesthetic appeal. ",
+    "desc": "",
+    "imgs": ["/img/products/cbst003830wh.jpg"]
+  }, {
+    "id": 5,
+    "product_id": 11,
+    "title": "",
+    "slug": "",
+    "is_best": false,
+    "title_thumb": "/img/products/cbst003830wh_tn128.jpg",
+    "title_img": "/img/products/cbst003830wh.jpg",
+    "brief": "",
+    "desc": "",
+    "imgs": ["/img/products/cbst003830wh.jpg"]
+  }
+]

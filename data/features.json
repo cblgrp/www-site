@@ -1,0 +1,17 @@
+{
+  "energy": {
+    "title": "Energy saver",
+    "img": "/img/feature-energy.png",
+    "desc":"LED is a highly energy efficient lighting technology. Residential LEDs use at least 75% less energy, and last 25 times longer, than incandescent lighting."
+  },
+  "design": {
+    "title": "Design for you",
+    "img": "/img/feature-design.png",
+    "desc":"Getting the lighting right is essential for any space in the home, Good design can help set the mood or define the functionality of a room."
+  },
+  "quality": {
+    "title": "High-quality products",
+    "img": "/img/feature-quality.png",
+    "desc":"Cloudybay Lighting manufactures energy efficient lighting in the most current and popular styles, using only the highest quality components."
+  }
+}

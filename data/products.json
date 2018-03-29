@@ -1,0 +1,27 @@
+[
+  {
+    "id": 11,
+    "cat_id": 1,
+    "title": "LED Flush Mount Ceiling Light (LMFFM712830WH)",
+    "alias": "lmffm712830wh-led-flush-mount-ceiling-light",
+    "thumb": "/img/products/lmffm712830wh_tn128.jpg",
+    "img": "/img/products/lmffm712830wh.jpg",
+    "feature": "4\" LED Modules, 7.5\", 12W 840lm"
+  }, {
+    "id": 23,
+    "cat_id": 2,
+    "title": "LED Indoor Outdoor Step Light (CBST003830WH)",
+    "alias": "led-indoor-outdoor-step-light-cbst003830wh",
+    "thumb": "/img/products/cbst003830wh_tn128.jpg",
+    "img": "/img/products/cbst003830wh.jpg",
+    "feature": "Modern home style, 3W 100lm"
+  }, {
+    "id": 25,
+    "cat_id": 2,
+    "title": "ETL Certified Bathroom Wall Light (LBVT2524840BN)",
+    "alias": "etl-certified-bathroom-wall-light-lbvt2524840bn",
+    "thumb": "/img/products/lbvt2524840bn_tn128.jpg",
+    "img": "/img/products/lbvt2524840bn.jpg",
+    "feature": "24W 1700lm, 48W Fluorescent Equivalent"
+  }
+]

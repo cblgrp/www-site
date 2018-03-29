@@ -1,0 +1,59 @@
+[
+  {
+    "id": 1,
+    "title": "Smart Lighting",
+    "alias": "smart-lighting",
+    "thumb": "/img/products/index1_tn72.jpg",
+    "img": "",
+    "desc": "7"
+  }, {
+    "id": 2,
+    "title": "Step Light",
+    "alias": "step-light",
+    "thumb": "/img/products/index2_tn72.jpg",
+    "img": "",
+    "desc": ""
+  }, {
+    "id": 3,
+    "title": "Ceiling Light",
+    "alias": "ceiling-light",
+    "thumb": "/img/products/index3_tn72.jpg",
+    "img": "",
+    "desc": ""
+  }, {
+    "id": 4,
+    "title": "Bath Vanity Lighting",
+    "alias": "bath-vanity-lighting",
+    "thumb": "/img/products/index4_tn72.jpg",
+    "img": "",
+    "desc": ""
+  }, {
+    "id": 5,
+    "title": "Indoor Wall Sconce",
+    "alias": "indoor-wall-sconce",
+    "thumb": "",
+    "img": "",
+    "desc": ""
+  }, {
+    "id": 6,
+    "title": "Pendant Lighting",
+    "alias": "pendant-lighting",
+    "thumb": "",
+    "img": "",
+    "desc": ""
+  }, {
+    "id": 7,
+    "title": "Track Lighting",
+    "alias": "track-lighting",
+    "thumb": "",
+    "img": "",
+    "desc": ""
+  }, {
+    "id": 8,
+    "title": "Outdoor Lighting",
+    "alias": "outdoor-lighting",
+    "thumb": "",
+    "img": "",
+    "desc": ""
+  }
+]
