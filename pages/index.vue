@@ -52,40 +52,6 @@
     <best-sellers :products="products" />
 
     <best-practices :products="products" />
-    <!-- <section
-      id="practices-section"
-      class="index-section"
-    >
-      <no-ssr>
-      <div class="uk-container uk-container-medium practices-container" v-if="bestSellers && bestSellers.length > 0">
-        <div class="uk-flex uk-flex-middle">
-          <div class="uk-flex-1 uk-margin-right uk-flex-first">
-            <hr>
-          </div>
-          <h5 class="uk-text-muted uk-text-uppercase uk-text-bold uk-margin-remove-top">Best Practices</h5>
-        </div>
-
-        <div
-          class="uk-grid-collapse uk-child-width-expand@s uk-text-center"
-          uk-grid
-          uk-height-match="target: > div > .uk-cover-container"
-        >
-          <div class="uk-width-2-5@m">
-            <div class="uk-cover-container">
-                <canvas width="" height="200"></canvas>
-                <img :src="bestSellers[1].thumb" alt="" uk-cover>
-            </div>
-          </div>
-          <div class="uk-width-1-5@m">
-            <div class="uk-cover-container">Item</div>
-          </div>
-          <div class="uk-width-2-5@m">
-            <div class="uk-cover-container">Item</div>
-          </div>
-        </div>
-      </div>
-      </no-ssr>
-    </section> -->
   </div>
 </template>
 

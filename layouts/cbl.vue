@@ -4,19 +4,19 @@
       <layout-header />
     </no-ssr>
     <div id="content">
-      <nuxt/>
+      <nuxt />
     </div>
     <no-ssr>
       <layout-footer />
     </no-ssr>
-    <a
+    <!-- <a
       id="to-top"
       href=""
       class="uk-dark"
       uk-totop
       uk-scroll
-    />
-    <div id="offcanvas" uk-offcanvas="mode: slide; overlay: true">
+    /> -->
+    <div id="offcanvas" uk-offcanvas>
       <div class="uk-offcanvas-bar uk-box-shadow-large">
         <div class="uk-panel">
           <ul class="uk-nav uk-nav-default">
@@ -93,7 +93,7 @@
     height: 50px;
     text-align: center;
     overflow: hidden;
-    z-index: 5000;
+    z-index: 800;
     color: #cecece;
     border: 1px solid rgba(0,0,0,0.1);
     background-color: #fff;

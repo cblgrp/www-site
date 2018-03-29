@@ -84,7 +84,7 @@
   @navbar-dark: rgba(27, 31, 35, 0.7);
   @navbar-light: rgba(255, 255, 255, .7); // Only For the text color of @navbar-dark background.
   #header {
-    z-index: 1000;
+    z-index: 900;
     position: absolute;
     top: 0;
     left: 0;

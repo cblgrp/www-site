@@ -12,7 +12,8 @@
         <div
           v-for="item in bestSellers" :key="item.id"
           class="best-seller-item"
-          uk-scrollspy="cls: uk-animation-slide-bottom-medium; repeat: true; delay: 100; offset-top: 50;">
+          uk-scrollspy="cls: uk-animation-slide-bottom-medium; repeat: true; delay: 100; offset-top: 70;"
+        >
           <a class="uk-cover-container uk-inline-clip uk-transition-toggle uk-border-rounded uk-box-shadow-small uk-box-shadow-hover-large">
             <img
               :src="item.thumb"
