@@ -13,7 +13,7 @@
         </p>
         <p class="uk-margin-remove-top">
           There are four layers of light typically used in residential lighting:
-          general (also called ambient) lighting, task lighting, accent lighting,
+          general or ambient lighting, task lighting, accent lighting,
           and decorative lighting. Combining and balancing these lighting types gives
           visual interest to the space and creates a more attractive,
           exiting and inviting environment.
