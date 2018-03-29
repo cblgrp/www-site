@@ -30,8 +30,8 @@
           class="best-practice-item uk-transition-toggle uk-width-1-2@s uk-width-1-4@m"
         >
           <div :class="`uk-card uk-card-default uk-card-body best-practice-content-${index}`">
-            <div class="item-image-container">
-              <div class="uk-cover-container" style="height: 300px;">
+            <div class="uk-inline item-image-container">
+              <div class="uk-cover-container" style="height: 300px; z-index: 0;">
                 <img
                   :src="item.title_thumb"
                   :data-src="item.title_img"
@@ -71,15 +71,9 @@
         border-bottom-right-radius: 5px;
       }
       .item-image-container {
-        position: relative;
-        overflow: hidden;
+        display: block;
       }
-      // a {
-      //   height: 200px;
-      // }
       img {
-        // left: -50%;
-        // top: -50%;
         width: 100%;
       }
       .uk-overlay {
